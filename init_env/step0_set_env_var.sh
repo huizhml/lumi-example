@@ -1,8 +1,8 @@
 #!/bin/bash
 
-NEW_PROJECT="xxx"
-ENV_NAME="ffcv"
-ENV_PREFIX=/projappl/project_${NEW_PROJECT}/${ENV_NAME}
+PROJECT_ID="xxx"
+ENV_NAME="conda_env"
+ENV_PREFIX=/projappl/project_${PROJECT_ID}/${ENV_NAME}
 mkdir -p $ENV_PREFIX
 
 # =========================== Clean old paths ===========================
@@ -12,7 +12,7 @@ export PATH="$CLEANED_PATH"
 
 # =========================== update ~/.bashrc ===========================
 FILE="$HOME/.bashrc"
-NEW_LINE="export PATH=\"/projappl/project_${NEW_PROJECT}/${ENV_NAME}/bin:\$PATH\""
+NEW_LINE="export PATH=\"/projappl/project_${PROJECT_ID}/${ENV_NAME}/bin:\$PATH\""
 # 1. Create a backup
 cp "$FILE" "${FILE}.bak"
 
@@ -25,13 +25,10 @@ echo "" >> "$FILE"
 echo "# Updated LUMI Python path" >> "$FILE"
 echo "$NEW_LINE" >> "$FILE"
 
-bash ~/.bashrc
-
-# =========================== Load modules and create container env ===========================
-
-module load LUMI
-module load lumi-container-wrapper
-conda-containerize new --prefix $ENV_PREFIX scripts/lumi/env_cnr.yml
-conda-containerize update $ENV_PREFIX --post-install scripts/lumi/env_update.sh
+# Set the EasyBuild user prefix for GDAL installation
+echo "export EBU_USER_PREFIX=/projappl/project_${PROJECT_ID}/EasyBuild" >> ~/.bashrc
 
 
+# make softlinks
+ln -s /scratch/project_${PROJECT_ID}/ ~/scratch
+ln -s /flash/project_${PROJECT_ID}/ ~/flash

@@ -1,0 +1,49 @@
+# add libraries you need
+pip install lightning==2.5.2
+pip3 install  --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm6.3
+pip install planetary-computer
+pip install tqdm
+pip install hydra-core
+pip install numba
+pip install scipy
+pip install timm
+pip install matplotlib
+pip install pandas
+pip install geopandas
+pip install h5py
+pip install rasterio
+pip install rio-cogeo
+pip install ffcv
+pip install kornia
+pip install contextily
+pip install dask
+pip install dask-jobqueue
+pip install dask-geopandas
+pip install h5netcdf
+pip install xarray
+pip install xarray-spatial
+pip install xarray-datatree
+pip install jsonargparse
+pip install ipykernel
+pip install jupyterlab
+pip install seaborn
+pip install ipdb
+pip install pytest
+pip install lightly
+pip install 'jsonargparse[signatures]>=4.27.7'
+pip install torchmetrics
+pip install --upgrade wandb
+pip install torch-summary==1.4.5
+pip install zarr
+pip install rioxarray
+pip install "bokeh>=3.1.0"
+pip install adlfs
+pip install geodatasets
+pip install 'stackstac[viz]'
+pip install backoff
+pip install earthengine-api --upgrade
+pip install pystac-client
+pip install netCDF4
+pip install retry
+pip install python-dotenv   
+pip install "numpy<2.0"
