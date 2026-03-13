@@ -115,3 +115,9 @@ Example
 ```bash
 sbatch submit_job.sh
 ```
+
+## Use GDAL
+```bash
+source load_gdal.sh
+```
+and then `pip list` to check if you have GDAL.

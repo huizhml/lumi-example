@@ -9,6 +9,9 @@
 #SBATCH --output=$P{HOME}/scratch/logs # NOTE: !!! do not save logs to home directory
 #SBATCH --error=$P{HOME}/scratch/logs # and make sure this folder exists
 
-
+# uncomment the following if you need to use GDAL
+# source load_gdal.sh
 source ~/.bashrc
+
+
 python your_script.py
