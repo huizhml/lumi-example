@@ -31,8 +31,10 @@ LUMI-EXAMPLE/
 3. Go to [LUMI user profile](https://mms.myaccessid.org/profile/) and register the public key.
 
     To register your key, click on the Settings item of the menu on the left as shown in the figure below. Then select SSH keys and click the New key button. Paste the content of your public key file in the text area and click the Add SSH key button.
-![image](https://docs.lumi-supercomputer.eu/assets/images/MyAccessID_ssh-key.png)
-After registering your SSH key, there can be a couple of hours delay until it is synchronized to LUMI and your account is created. 
+
+    ![image](https://docs.lumi-supercomputer.eu/assets/images/MyAccessID_ssh-key.png)
+
+    After registering your SSH key, there can be a couple of hours delay until it is synchronized to LUMI and your account is created. 
 
 4. Setup SSH config for LUMI <br>
    open `~/.ssh/config`, copy and paste the following
@@ -57,8 +59,6 @@ Clone the example code
 ```
 git clone https://github.com/huizhml/lumi-example.git
 ```
-
- change xxxxxxx to your project number, which you can check by running `lumi-workspaces`
 
 ## New env
 
