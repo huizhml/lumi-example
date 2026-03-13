@@ -96,8 +96,14 @@ If you want to install a difference version, check this [page](https://lumi-supe
 
 # Run jobs
 ## Iteractive bash terminal
+For debugging CPU jobs
 ```bash
-srun -A project_{your_project_number} -p small --pty -t 8:00:00 --mem 64G --cpus-per-task 16 bash
+srun -A project_{your_project_number} -p small --pty -t 8:00:00 --mem 32G --cpus-per-task 16 bash
+```
+
+For debugging GPU jobs
+```bash
+srun -A project_{your_project_number} -p small-g --pty -t 8:00:00 --mem 32G --cpus-per-task 16 bash
 ```
 
 ## Submit a job
