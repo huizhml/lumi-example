@@ -103,7 +103,7 @@ srun -A project_{your_project_number} -p small --pty -t 8:00:00 --mem 32G --cpus
 
 For debugging GPU jobs
 ```bash
-srun -A project_{your_project_number} -p small-g --pty -t 8:00:00 --mem 32G --cpus-per-task 16 bash
+srun -A project_{your_project_number} -p small-g --pty -t 8:00:00 --mem 32G --cpus-per-task 16 --gres gpu:1 bash
 ```
 
 ## Submit a job
